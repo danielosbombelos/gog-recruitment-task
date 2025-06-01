@@ -1,0 +1,12 @@
+@use 'abstract/variables';
+
+:host {
+  display: block;
+
+  .menu-container {
+    width: auto;
+    margin: 0 auto;
+    max-width: variables.$layout-container-width;
+    padding: 0 variables.$layout-side-paddings;
+  }
+}
