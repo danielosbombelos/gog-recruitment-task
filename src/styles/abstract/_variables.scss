@@ -1,3 +1,24 @@
+// Brand colors:
+$primary: rgb(182, 90, 226);
+$primary-variant: rgb(122, 61, 198);
+
+// for the variable below I would negotiate with designer to unify the variants to minimize the clutter
+// OR to calculate the shade based on $primary-variant color is also an option
+$primary-variant-2: rgb(108, 54, 173);
+$secondary: rgb(0, 144, 94);
+
+// Surface colors:
+$light-sys-surface-base: rgb(255, 255, 255);
+
+$light-sys-surface-100: rgb(222, 222, 222);
+$light-sys-surface-200: rgb(205, 205, 205);
+$light-sys-surface-300: rgb(194, 194, 194);
+
 // Layout:
 $layout-container-width: 1140px;
 $layout-side-paddings: 40px;
+
+// Elevations:
+$elevate-1:
+  0px 1px 3px 0px rgba(0, 0, 0, 0.15),
+  0px 0px 15px 0px rgba(0, 0, 0, 0.15);

@@ -1,12 +1,33 @@
-@use 'abstract/variables';
+@use 'abstract/variables' as vars;
+@use 'abstract/z-index' as z;
 
 :host {
+  position: relative;
   display: block;
+  z-index: z.getIndex('header');
+  background-color: var(--c-sys-navbar-background);
+  box-shadow: vars.$elevate-1;
+
+  &:before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: var(--gr-sys-navbar-background-fx);
+  }
 
   .menu-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    height: 59px;
     width: auto;
     margin: 0 auto;
-    max-width: variables.$layout-container-width;
-    padding: 0 variables.$layout-side-paddings;
+    max-width: vars.$layout-container-width;
+    padding: 0 vars.$layout-side-paddings;
   }
 }

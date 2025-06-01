@@ -1,0 +1,23 @@
+$z-index-map: (
+  'auto': auto,
+  'below': -1,
+  'base': 0,
+  'content': 10,
+  'header': 20,
+  'dropdown': 100,
+  'overlay': 200,
+  'modal': 300,
+  'tooltip': 400,
+  'toast': 500,
+);
+
+// Get z-index value by semantic key
+// @param {String} $layer - Semantic z-index layer name
+// @returns {Number|auto}
+@function getIndex($layer) {
+  @if map-has-key($z-index-map, $layer) {
+    @return map-get($z-index-map, $layer);
+  }
+
+  @error "⚠️ Unknown z-index layer `#{$layer}`. Check your z-index map.";
+}

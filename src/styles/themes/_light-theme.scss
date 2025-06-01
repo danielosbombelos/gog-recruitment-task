@@ -1,4 +1,21 @@
+@use 'abstract/variables' as var;
+
 body.theme-light {
-  --c-background: #cdcdcd;
-  --gradient-background: linear-gradient(180deg, rgba(108, 54, 173, 0.1), rgba(194, 194, 194, 0));
+  // Surface colors
+  --c-sys-navbar-background: #{var.$light-sys-surface-100};
+  --gr-sys-navbar-background-fx:
+    linear-gradient(
+      0deg,
+      #{transparentize(var.$light-sys-surface-100, 1)},
+      #{transparentize(var.$light-sys-surface-base, 0.5)} 93.45%,
+      #{transparentize(var.$light-sys-surface-base, 0.51)} 100%
+    ),
+    #{var.$light-sys-surface-100};
+
+  --c-sys-background: #{var.$light-sys-surface-200};
+  --gr-sys-background-fx: linear-gradient(
+    180deg,
+    #{transparentize(var.$primary-variant-2, 0.9)},
+    #{transparentize(var.$light-sys-surface-300, 1)}
+  );
 }
