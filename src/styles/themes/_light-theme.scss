@@ -1,6 +1,11 @@
 @use 'abstract/variables' as var;
 
 body.theme-light {
+  // Font colors
+  --c-text-primary: rgb(26, 26, 26); // 1A1A1A
+  --c-text-secondary: rgb(33, 33, 33); // 262626, 212121 - designer used 2 very similar colors, I'd try to convince him to use one
+  --c-text-tertiary: rgb(64, 64, 64); // 404040
+
   // Surface colors
   --c-sys-navbar-background: #{var.$light-sys-surface-100};
   --gr-sys-navbar-background-fx:

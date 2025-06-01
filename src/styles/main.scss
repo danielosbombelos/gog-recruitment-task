@@ -1,2 +1,7 @@
-@use 'themes/light-theme';
+// Base
 @use 'base/reset';
+@use 'base/fonts';
+@use 'base/typography';
+
+// Themes
+@use 'themes/light-theme';

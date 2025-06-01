@@ -1,0 +1,15 @@
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-optical-sizing: auto;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
+.section-header {
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  color: var(--c-text-secondary);
+}
