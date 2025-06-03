@@ -1,11 +1,11 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  selector: 'app-navbar',
+  selector: 'app-section-products',
   standalone: true,
   imports: [],
-  templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.scss',
+  template: `<ng-content />`,
+  styleUrl: './section-products.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class NavbarComponent {}
+export class SectionProductsComponent {}

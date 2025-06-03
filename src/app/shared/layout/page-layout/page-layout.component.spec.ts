@@ -1,23 +1,32 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { PageLayoutComponent } from './page-layout.component';
+import { Component } from '@angular/core';
+
+@Component({
+  template: `<app-page-layout><p class="projected-content">Test content</p></app-page-layout>`,
+  standalone: true,
+  imports: [PageLayoutComponent],
+})
+class TestHostComponent {}
 
 describe('PageLayoutComponent', () => {
-  let component: PageLayoutComponent;
-  let fixture: ComponentFixture<PageLayoutComponent>;
+  let fixture: ComponentFixture<TestHostComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [PageLayoutComponent]
-    })
-    .compileComponents();
+      imports: [TestHostComponent],
+    }).compileComponents();
 
-    fixture = TestBed.createComponent(PageLayoutComponent);
-    component = fixture.componentInstance;
+    fixture = TestBed.createComponent(TestHostComponent);
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it('should render projected content inside .page-container', () => {
+    const container = fixture.nativeElement.querySelector('.page-container');
+    const projected = container.querySelector('.projected-content');
+
+    expect(container).toBeTruthy();
+    expect(projected).toBeTruthy();
+    expect(projected.textContent.trim()).toBe('Test content');
   });
 });

@@ -1,0 +1,9 @@
+{
+  "id": "0",
+  "title": "the witcher adventure game",
+  "price": 9.99,
+  "currency": "USD",
+  "discount": 0,
+  "image": "assets/mocks/witcher.jpg",
+  "isOwned": false
+}

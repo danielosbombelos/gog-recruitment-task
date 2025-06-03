@@ -1,3 +1,5 @@
+@use 'abstract/variables' as vars;
+
 body {
   font-family: 'Source Sans Pro', sans-serif;
   font-optical-sizing: auto;
@@ -10,6 +12,6 @@ body {
   font-size: 15px;
   font-weight: 700;
   text-transform: uppercase;
-  margin-bottom: 20px;
+  margin-bottom: vars.$layout-base-spacing;
   color: var(--c-text-secondary);
 }

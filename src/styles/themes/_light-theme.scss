@@ -1,26 +1,47 @@
 @use 'abstract/variables' as var;
+@use 'abstract/functions' as fn;
 
 body.theme-light {
+  // Brand colors
+  --c-brand-primary: #{var.$primary};
+  --c-brand-primary-contrast: #fff;
+  --c-brand-secondary: #{var.$secondary};
+  --c-brand-secondary-contrast: #{fn.getColorContrast(var.$secondary)};
+
   // Font colors
   --c-text-primary: rgb(26, 26, 26); // 1A1A1A
   --c-text-secondary: rgb(33, 33, 33); // 262626, 212121 - designer used 2 very similar colors, I'd try to convince him to use one
   --c-text-tertiary: rgb(64, 64, 64); // 404040
 
-  // Surface colors
-  --c-sys-navbar-background: #{var.$light-sys-surface-100};
+  // Buttons
+  --gr-button-primary: linear-gradient(180deg, #{var.$primary}, #{var.$primary-variant});
+  --gr-button-disabled: linear-gradient(180deg, #{var.$light-surface-400}, #{var.$light-surface-500});
+
+  // Reusable UI elements
+  --c-ui-primary: #{var.$light-surface-base};
+  --c-ui-secondary: #{var.$light-surface-50};
+  --c-ui-dividers: #{transparentize(var.$light-surface-400, 0.5)};
+  --c-ui-borders: #{var.$light-surface-500};
+
+  // Products covers
+  --c--img-overlay-text: #fff;
+  --c--img-overlay-background: linear-gradient(0deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+
+  // Core elements
+  --c-sys-navbar-background: #{var.$light-surface-100};
   --gr-sys-navbar-background-fx:
     linear-gradient(
       0deg,
-      #{transparentize(var.$light-sys-surface-100, 1)},
-      #{transparentize(var.$light-sys-surface-base, 0.5)} 93.45%,
-      #{transparentize(var.$light-sys-surface-base, 0.51)} 100%
+      #{transparentize(var.$light-surface-100, 1)},
+      #{transparentize(var.$light-surface-base, 0.5)} 93.45%,
+      #{transparentize(var.$light-surface-base, 0.51)} 100%
     ),
-    #{var.$light-sys-surface-100};
+    #{var.$light-surface-100};
 
-  --c-sys-background: #{var.$light-sys-surface-200};
+  --c-sys-background: #{var.$light-surface-200};
   --gr-sys-background-fx: linear-gradient(
     180deg,
     #{transparentize(var.$primary-variant-2, 0.9)},
-    #{transparentize(var.$light-sys-surface-300, 1)}
+    #{transparentize(var.$light-surface-300, 1)}
   );
 }

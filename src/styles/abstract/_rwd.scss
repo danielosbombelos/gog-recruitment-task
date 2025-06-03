@@ -1,0 +1,16 @@
+$rwd-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+);
+
+@function getPoint($break-point) {
+  @if map-has-key($rwd-breakpoints, $break-point) {
+    @return map-get($rwd-breakpoints, $break-point);
+  }
+
+  @error "⚠️ Unknown breakpoint selector `#{$break-point}`. Check the breakpoints map.";
+}

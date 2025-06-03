@@ -6,7 +6,7 @@
   display: block;
   z-index: z.getIndex('header');
   background-color: var(--c-sys-navbar-background);
-  box-shadow: vars.$elevate-1;
+  box-shadow: vars.$elevate-2;
 
   &:before {
     position: absolute;

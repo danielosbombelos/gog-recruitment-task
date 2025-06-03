@@ -8,17 +8,25 @@ $primary-variant-2: rgb(108, 54, 173);
 $secondary: rgb(0, 144, 94);
 
 // Surface colors:
-$light-sys-surface-base: rgb(255, 255, 255);
+$light-surface-base: rgb(255, 255, 255);
 
-$light-sys-surface-100: rgb(222, 222, 222);
-$light-sys-surface-200: rgb(205, 205, 205);
-$light-sys-surface-300: rgb(194, 194, 194);
+$light-surface-50: rgb(224, 224, 224);
+$light-surface-100: rgb(222, 222, 222);
+$light-surface-200: rgb(205, 205, 205);
+$light-surface-300: rgb(194, 194, 194);
+$light-surface-400: rgb(184, 184, 184);
+$light-surface-500: rgb(151, 151, 151);
 
 // Layout:
 $layout-container-width: 1140px;
-$layout-side-paddings: 40px;
+$layout-base-spacing: 20px;
+$layout-side-paddings: $layout-base-spacing * 2;
 
 // Elevations:
-$elevate-1:
+$elevate-1: 0px 1px 5px 0px rgba(0, 0, 0, 0.3);
+$elevate-2:
   0px 1px 3px 0px rgba(0, 0, 0, 0.15),
   0px 0px 15px 0px rgba(0, 0, 0, 0.15);
+
+// Animations:
+$transition-default: 0.2s ease;

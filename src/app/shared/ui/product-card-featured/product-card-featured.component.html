@@ -1,0 +1,28 @@
+<article class="product-card" data-testid="featuredProductCard">
+  <img class="product-image" data-testid="productImage" [ngSrc]="product().image" [alt]="product().title" width="196" height="110" />
+  <div class="product-info">
+    <h2 class="product-title" data-testid="productTitle">{{ product().title }}</h2>
+    <div class="product-details">
+      @if (product().isOwned) {
+        <div class="product-status owned" data-testid="productOwnershipStatus" aria-label="You own this product">owned</div>
+      } @else if (isInCart()) {
+        <div class="product-status in-cart" data-testid="productCartStatus" aria-label="Product is in your cart">in cart</div>
+      } @else {
+        @if (product().discount > 0) {
+          <div class="product-discount" data-testid="productDiscount" attr.aria-label="Discounted {{ product().discount | percent }}">
+            -{{ product().discount | percent }}
+          </div>
+        }
+        <button
+          (click)="onAddToCart(product())"
+          type="button"
+          class="product-price"
+          data-testid="productPriceButton"
+          attr.aria-label="Add {{ product().title }} to your cart for {{ product().price | currency: product().currency : 'symbol' }}"
+        >
+          {{ product().price | currency: product().currency : 'symbol' }}
+        </button>
+      }
+    </div>
+  </div>
+</article>

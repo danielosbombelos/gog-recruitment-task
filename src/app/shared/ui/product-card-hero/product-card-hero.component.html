@@ -1,0 +1,16 @@
+<article class="product-card" data-testid="productOfTheWeekCard">
+  <img
+    class="product-image"
+    data-testid="productImage"
+    priority
+    [ngSrc]="product().image"
+    [alt]="product().title"
+    width="1060"
+    height="370"
+  />
+  <div class="product-image-fx"></div>
+  <div class="product-info">
+    <h2 class="product-title" data-testid="productTitle">{{ product().title }}</h2>
+    <p class="product-caption" data-testid="productCaption">comming soon!</p>
+  </div>
+</article>

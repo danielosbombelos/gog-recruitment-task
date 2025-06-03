@@ -1,0 +1,79 @@
+@use 'abstract/z-index' as z;
+
+:host {
+  display: block;
+  height: 100%;
+}
+
+.cart-dropdown-container {
+  height: 100%;
+  position: relative;
+
+  .cart {
+    &-button {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      border-top: none;
+      border-bottom: none;
+      border-left: 1px solid var(--c-ui-dividers);
+      border-right: 1px solid var(--c-ui-dividers);
+      padding: 0 16px;
+
+      background-color: transparent;
+
+      &.active {
+        background-color: var(--c-ui-primary);
+      }
+    }
+
+    &-icon {
+      color: var(--c-text-primary);
+    }
+
+    &-counter {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--c-text-tertiary);
+    }
+
+    &-menu {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      width: 370px;
+      z-index: z.getIndex('dropdown');
+      background-color: var(--c-ui-primary);
+
+      &-summary {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 5px;
+      }
+
+      &-counter,
+      &-total {
+        font-size: 15px;
+        font-weight: 700;
+        color: var(--c-text-primary);
+      }
+
+      &-counter {
+        flex: 1;
+      }
+
+      &-total {
+        flex: 0;
+      }
+
+      &-remove-button {
+        flex: unset;
+      }
+
+      &-items-list {
+        padding: 0;
+      }
+    }
+  }
+}

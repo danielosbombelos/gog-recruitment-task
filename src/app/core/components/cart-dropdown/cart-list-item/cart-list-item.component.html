@@ -1,0 +1,34 @@
+<li
+  class="product-item"
+  data-testid="cartMenuListItem"
+  tabindex="0"
+  (mouseenter)="setHoveredItemId(product().id)"
+  (mouseleave)="setHoveredItemId(null)"
+  (focus)="setHoveredItemId(product().id)"
+  (blur)="setHoveredItemId(null)"
+>
+  <img class="product-image" data-testid="cartProductImage" [ngSrc]="product().image" [alt]="product().title" width="100" height="56" />
+  <div class="product-info">
+    <span class="product-title" data-testid="cartProductTitle">{{ product().title }}</span>
+    @if (hoveredItemId() === product().id) {
+      <button
+        type="button"
+        class="product-remove-button"
+        data-testid="cartProductRemove"
+        attr.aria-label="Remove {{ product().title }} from cart"
+        (focus)="setHoveredItemId(product().id)"
+        (blur)="setHoveredItemId(null)"
+        (click)="removeItemFromCart(product().id)"
+      >
+        Remove
+      </button>
+    }
+  </div>
+  <div
+    class="product-price"
+    data-testid="cartProductPrice"
+    attr.aria-label="Product price is {{ product().price | currency: product().currency : 'symbol' }}"
+  >
+    {{ product().price | currency: product().currency : 'symbol' }}
+  </div>
+</li>

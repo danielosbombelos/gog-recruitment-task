@@ -1,0 +1,47 @@
+[
+  {
+    "id": "1",
+    "title": "oddworld: stranger’s wrath",
+    "price": 9.99,
+    "currency": "USD",
+    "discount": 0.5,
+    "image": "assets/mocks/oddworld.jpg",
+    "isOwned": false
+  },
+  {
+    "id": "2",
+    "title": "chaos on deponia",
+    "price": 9.99,
+    "currency": "USD",
+    "discount": 0.5,
+    "image": "assets/mocks/deponia.jpg",
+    "isOwned": true
+  },
+  {
+    "id": "3",
+    "title": "The settlers 2: gold edition",
+    "price": 5.99,
+    "currency": "USD",
+    "discount": 0,
+    "image": "assets/mocks/settlers.jpg",
+    "isOwned": false
+  },
+  {
+    "id": "4",
+    "title": "neverwinter nights",
+    "price": 9.99,
+    "currency": "USD",
+    "discount": 0.5,
+    "image": "assets/mocks/neverwinter.jpg",
+    "isOwned": false
+  },
+  {
+    "id": "5",
+    "title": "assassin’s creed: director’s cut",
+    "price": 9.99,
+    "currency": "USD",
+    "discount": 0,
+    "image": "assets/mocks/assassin.jpg",
+    "isOwned": false
+  }
+]

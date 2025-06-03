@@ -1,5 +1,16 @@
 <app-page-layout>
-  <section>
-    <h2 class="section-header">Game of the weak</h2>
+  <section aria-labelledby="game-of-the-week-heading">
+    <h2 id="game-of-the-week-heading" class="section-header" data-testid="sectionHeader">Game of the weak</h2>
+
+    @let weekProduct = productOfTheWeek();
+    @if (weekProduct) {
+      <app-product-card-hero [product]="weekProduct" data-testid="productCardHero" />
+    }
+
+    <app-section-products>
+      @for (product of featuredProducts(); track product.id) {
+        <app-product-card-featured [product]="product" data-testid="productCardFeatured" />
+      }
+    </app-section-products>
   </section>
 </app-page-layout>

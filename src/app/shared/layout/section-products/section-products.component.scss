@@ -1,0 +1,25 @@
+@use 'abstract/variables' as vars;
+@use 'abstract/rwd';
+
+:host {
+  display: grid;
+  grid-gap: #{vars.$layout-base-spacing};
+}
+
+@media (min-width: #{rwd.getPoint('sm')}) {
+  :host {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: #{rwd.getPoint('md')}) {
+  :host {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: #{rwd.getPoint('lg')}) {
+  :host {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
