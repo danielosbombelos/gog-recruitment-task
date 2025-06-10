@@ -16,11 +16,11 @@
 src/
 ├── app/
 │   ├── core/ # Layout and global components (navbar, cart)
-│   ├──shared/ # Reusable UI + layout components
-│   ├──pages/ # Route-based views
-│   ├──state/ # Reactive stores and repositories
+│   ├── shared/ # Reusable UI + layout components
+│   ├── pages/ # Route-based views
+│   └── state/ # Reactive stores and repositories
 ├── assets/ # Static files
-├── styles/ # For you know... styles..
+└── styles/ # For you know... styles..
 ```
 
 ## Recommended development environment prerequisites
